@@ -19,3 +19,5 @@ jobs:
       - run: npm run build
       - run: npm run build:test
       - run: npm run test
+      - run: npm run test:generate
+      - run: test $(git status --porcelain | wc -l) = 0
